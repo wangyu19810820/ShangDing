@@ -20,6 +20,7 @@
     <spring.version>3.1.1.RELEASE</spring.version>
     <hibernate.version>3.6.0.Final</hibernate.version>
     <jpa2.version>1.0.1.Final</jpa2.version>
+    <fasterxml.version>2.9.5</fasterxml.version>
   </properties>
 
   <dependencies>
@@ -122,6 +123,48 @@
           <artifactId>spring-data-commons</artifactId>
           <version>1.13.7.RELEASE</version>
       </dependency>
+
+      <dependency>
+          <groupId>com.oracle</groupId>
+          <artifactId>ojdbc14</artifactId>
+          <version>10.2.0.2</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.javassist</groupId>
+          <artifactId>javassist</artifactId>
+          <version>3.22.0-GA</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.ehcache</groupId>
+          <artifactId>ehcache</artifactId>
+          <version>3.5.2</version>
+      </dependency>
+
+      <dependency>
+          <groupId>net.sf.ehcache</groupId>
+          <artifactId>ehcache-core</artifactId>
+          <version>2.6.11</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.hibernate</groupId>
+          <artifactId>hibernate-ehcache</artifactId>
+          <version>${hibernate.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.codehaus.jackson</groupId>
+          <artifactId>jackson-mapper-asl</artifactId>
+          <version>1.9.13</version>
+      </dependency>
+      <dependency>
+          <groupId>org.codehaus.jackson</groupId>
+          <artifactId>jackson-mapper-lgpl</artifactId>
+          <version>1.9.13</version>
+      </dependency>
+
 
   </dependencies>
 

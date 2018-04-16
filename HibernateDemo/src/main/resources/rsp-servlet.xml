@@ -32,4 +32,8 @@
 		<!--class="org.springframework.context.support.ResourceBundleMessageSource"-->
 		<!--p:basename="i18n/messages" />-->
     <!--<mvc:default-servlet-handler/>-->
+
+	<!-- 访问静态资源 -->
+	<mvc:resources location="/bootstrap" mapping="/**"/>
+
 </beans>  

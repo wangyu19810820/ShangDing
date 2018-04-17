@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applicationContext.xml")
@@ -29,6 +30,14 @@ public class TestDb {
     public void testLoad() {
         Pjbztxgl pjbztxgl = this.hibernateTemplate.load(Pjbztxgl.class, 1);
         System.out.println(pjbztxgl);
+    }
+
+    @Test
+    public void testSelectAll() {
+        List<Pjbztxgl> list = this.hibernateTemplate.loadAll(Pjbztxgl.class);
+        for (Pjbztxgl p : list) {
+            System.out.println(p);
+        }
     }
 
     @Test

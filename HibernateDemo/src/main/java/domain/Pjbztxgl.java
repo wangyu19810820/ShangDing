@@ -130,4 +130,19 @@ public class Pjbztxgl extends BaseDomain {
     public void setZbzfz(String zbzfz) {
         this.zbzfz = zbzfz;
     }
+
+    @Override
+    public String toString() {
+        return "Pjbztxgl{" +
+                "Id=" + Id +
+                ", txmc='" + txmc + '\'' +
+                ", pjlx='" + pjlx + '\'' +
+                ", mxkclx='" + mxkclx + '\'' +
+                ", mxjs='" + mxjs + '\'' +
+                ", sfsx='" + sfsx + '\'' +
+                ", startxq='" + startxq + '\'' +
+                ", endxq='" + endxq + '\'' +
+                ", zbzfz='" + zbzfz + '\'' +
+                '}';
+    }
 }

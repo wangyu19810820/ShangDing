@@ -1,4 +1,3 @@
-<!-- 对象类型的数据 -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,37 +8,23 @@
 
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/DataTables/datatables.css">
+    <link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.css">
 
     <script src="/jquery/jquery-3.3.1.js"></script>
     <script src="/bootstrap/js/bootstrap.js"></script>
     <script src="/DataTables/datatables.js"></script>
+    <script src="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.js"></script>
 
     <script>
         $(document).ready(() => {
-            var data = [
-                {
-                    name:"Tiger Nixon",
-                    address:"System Architect",
-                    tel:"Edinburgh",
-                    date:"2011/04/25",
-                    acount:"$3,120",
-                },
-                {
-                    name:"Garrett Winters",
-                    address:"Director",
-                    tel:"8422",
-                    date:"2011/07/25",
-                    acount:"$5,300",
-                },
-            ];
             $('#table_id').DataTable({
-                data: data,
-                columns:[
-                    {data:"name"},
-                    {data:"address"},
-                    {data:"tel"},
-                    {data:"date"},
-                    {data:"acount"},
+                ajax:{
+                    url:'/datatable/getData3',
+                    dataSrc: '',
+                },
+                columns:[       // 返回是数据类型是数组时，columns设置可省略
+                    {data:0},
+                    {data:1},
                 ]
             });
         });
@@ -49,6 +34,15 @@
 </head>
 <body>
 <table id="table_id" class="display">
+    <thead>
+    <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
 </table>
 </body>
 </html>

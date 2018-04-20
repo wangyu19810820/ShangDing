@@ -68,4 +68,20 @@ public class DataTableController {
         list.add(user2);
         return list;
     }
+
+    @RequestMapping("/getData5")
+    @ResponseBody
+    public List<User> getData5() {
+        List<User> list = new ArrayList<>();
+        User user1 = new User("user1",
+                new Address("city1", "street1"),
+                new Article("name1", "2nd April 2017", "1491062400"));
+        list.add(user1);
+        User user2 = new User("user2",
+                new Address("city2", "street2"),
+                new Article("name2", "2nd March 2017", "1488384000"));
+        list.add(user2);
+        return list;
+    }
+
 }

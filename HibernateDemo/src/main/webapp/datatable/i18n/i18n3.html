@@ -1,0 +1,66 @@
+<!-- 国际化，指定数字格式分隔符 -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/DataTables/datatables.css">
+
+    <script src="/jquery/jquery-3.3.1.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/DataTables/datatables.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            var data = [
+                {
+                    name:"Tiger Nixon",
+                    address:"System Architect",
+                    tel:"Edinburgh",
+                    date:"2011/04/25",
+                    acount:"$3,120",
+                },
+                {
+                    name:"Garrett Winters",
+                    address:"Director",
+                    tel:"8422",
+                    date:"2011/07/25",
+                    acount:"$5,300",
+                },
+            ];
+            $('#table_id').DataTable({
+                data: data,
+                columns:[
+                    {data:"name"},
+                    {data:"address"},
+                    {data:"tel"},
+                    {data:"date"},
+                    {data:"acount"},
+                ],
+                language: {
+                    decimal: ",",       // 指定数字格式分隔符
+                }
+            });
+        });
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+<table id="table_id" class="display">
+    <thead>
+    <tr>
+        <th>列 1</th>
+        <th>列 2</th>
+        <th>列 3</th>
+        <th>列 4</th>
+        <th>列 5</th>
+    </tr>
+    </thead>
+</table>
+</body>
+</html>

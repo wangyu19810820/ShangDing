@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html>         <!-- 利用option控制数据展示转换（正交） -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,9 +28,9 @@
                     {data:"address", render:"city"},                                        // 显示address.city
                     {data:"article.publish"},
                     {data:"article", render:{_:"publish", sort:"publishTimestamp"}},    // 按publish显示，按publishTimestamp排序
-                    {
+                    {                                                                         // 函数控制显示
                         data:"article",
-                        render:(data, type, row) => {
+                        render:(data, type, row) => {                                           // data当前列数据，type数据用途，row当前行数据
                             console.log("type:" + type + ",row:" + row);
                             if (type === "display" || type === "filter") {
                                 var d = new Date(data.publishTimestamp * 1000);

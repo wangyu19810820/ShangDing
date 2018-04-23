@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html>                 <!-- 获取api对象，用js操作表格。本例中让两个表格翻页 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,9 +37,9 @@
                 ]
             });
             $('#button1').click(() => {
-                // var table = $('.table').DataTable();
-                var table = $('.table').dataTable().api();  // 获取DataTable实例的两种方法
-                table.page( 'next' ).draw( false );
+                // var table = $('.table').DataTable();         // 获取DataTable实例的两种方法
+                var table = $('.table').dataTable().api();     // 获取两个表格的操作引用
+                table.page( 'next' ).draw( false );            // 让两个表格翻到下一页
                 // table.row
                 //      .add(["aaa", "bbb"])
                 //      .draw();

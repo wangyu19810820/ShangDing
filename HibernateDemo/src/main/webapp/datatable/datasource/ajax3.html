@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html>                     <!-- 返回的数据是数组形式 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
 
     <script>
         $(document).ready(() => {
-            $('#table_id').DataTable({
+            $('#table_id').DataTable({                  // json格式为[[x,y], [x,y]]
                 ajax:{
                     url:'/datatable/getData3',
                     dataSrc: '',

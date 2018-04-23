@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html>                 <!-- 返回数据是嵌套json -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
 
     <script>
         $(document).ready(() => {
-            $('#table_id').DataTable({
+            $('#table_id').DataTable({          // 数据嵌套在json中{name:xxx, address:{city:yyy, street:zzz}}
                 ajax:{
                     url:'/datatable/getData4',
                     dataSrc: '',

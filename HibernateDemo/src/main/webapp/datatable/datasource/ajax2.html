@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html>             <!-- 一个比较简单的demo，ajax返回数据包含容器标识字段 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,13 +16,13 @@
 
     <script>
         $(document).ready(() => {
-            $('#table_id').DataTable({
+            $('#table_id').DataTable({               // 数据在一个容器字段中data:{...}
                 // ajax:{
                 //     url:'/datatable/getData1',
                 //     dataSrc: 'data',
                 // },
                 ajax:{
-                    url:'/datatable/getData2',
+                    url:'/datatable/getData2',      // 数据在一个容器字段中staff:{...}
                     dataSrc: 'staff',
                 },
                 columns:[

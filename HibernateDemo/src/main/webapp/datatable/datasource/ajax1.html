@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html>             <!-- 一个比较简单的demo，通过ajax获取数据 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,10 +18,10 @@
         $(document).ready(() => {
             $('#table_id').DataTable({
                 ajax:{
-                    url:'/datatable/getData',
-                    dataSrc: '',
+                    url:'/datatable/getData',       // ajax数据源url
+                    dataSrc: '',                      // 返回的json直接就是数据，不包含容器识别字段，如“data={...}”
                 },
-                columns:[
+                columns:[                           // 列信息
                     {data:"column1"},
                     {data:"column2"},
                 ]

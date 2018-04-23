@@ -1,5 +1,6 @@
 package domain.datatable;
 
+// 用于最简单的调用，本身和DataTable的API是无关的
 public class DataTableModel {
 
     private String column1;

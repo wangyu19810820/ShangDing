@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/DataTables/datatables.css">
+
+    <script src="/jquery/jquery-3.3.1.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/DataTables/datatables.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            var callback;
+            var table = $('#table_id');
+            table.DataTable({
+                ajax:{
+                    url:'/datatable/getData3',
+                    dataSrc: '',
+                },
+                columns:[       // 返回是数据类型是数组时，columns设置可省略
+                    {data:0},
+                    {data:1},
+                ]
+            });
+
+            // 往表格添加一行，触发表格的draw事件
+            $('#button1').click(() => {
+                var table1 = $('#table_id').DataTable();
+                table1.row
+                     .add(["aaa", "bbb"])
+                     .draw();
+            });
+
+            // 添加draw事件
+            $('#button2').click(() => {
+                callback = function () {
+                    alert('Table redrawn');
+                }
+                // 用draw.dt避免命名冲突，用draw和draw.dt可以互相替换
+                table.DataTable().on( 'draw.dt', callback);
+            });
+
+            // 移除draw事件
+            $('#button3').click(() => {
+                // 用draw.dt避免命名冲突，用draw和draw.dt可以互相替换
+                table.DataTable().off( 'draw', callback);
+                // 移除draw.dt所有事件
+                // table.DataTable().off( 'draw.dt');
+            });
+
+            // 添加一次性事件
+            $('#button4').click(() => {
+                // 用draw.dt避免命名冲突，用draw和draw.dt可以互相替换
+                table.DataTable().one( 'draw.dt', function () {
+                    alert('Table redrawn');
+                });
+            });
+
+        });
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+<button id="button1">添加一行</button>
+<button id="button2">添加事件</button>
+<button id="button3">移除事件</button>
+<button id="button4">添加一次事件</button>
+<table id="table_id" class="display">
+    <thead>
+    <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+</body>
+</html>

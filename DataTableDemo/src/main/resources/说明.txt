@@ -1,0 +1,3 @@
+主要用于测试验证spring-data-jpa-datatables
+
+例子都在HibernateDemo的datatable文件夹下

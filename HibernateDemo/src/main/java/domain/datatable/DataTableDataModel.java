@@ -2,6 +2,8 @@ package domain.datatable;
 
 import java.util.List;
 
+// 将数据塞进data属性中，方便客户端使用
+// 和DataTable的API关系不大
 public class DataTableDataModel {
 
     private List data;

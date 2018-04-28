@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/metronic_old/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/metronic_old/media/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/metronic_old/media/css/style.css">
+    <link rel="stylesheet" href="/metronic_old/media/css/style-metro.css">
+    <link rel="stylesheet" href="/metronic_old/media/css/style-responsive.css">
+    <link rel="stylesheet" href="/metronic_old/media/css/default.css">
+    <link rel="stylesheet" href="/metronic_old/self_style.css">
+    <style>
+        @media only screen and (min-width: 640px) {
+            .brand, .top-menu {
+                display: block;
+            }
+        }
+        @media only screen and (max-width: 640px) {
+            .brand, .top-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+
+    <div class="header navbar navbar-inverse">
+        <input type="hidden" value="${sessionScope.contextPath}" id="contextPath" />
+        <input type="hidden" value="${sessionScope.curCD}" id="curCD" />
+
+        <div class="navbar-inner">
+            <div class="container-fluid">
+
+                <a class="brand" onclick="" title="">
+                    <img src="/img/logo.png" alt="">
+                    <span>本科教学监控系统</span>
+                </a>
+                
+                <div class="top-menu">
+                    <a href="#" class="navbar-link">首页</a>
+                    <a href="#" class="data">首页1</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="page-sidebar nav-collapse collapse">
+            <ul class="page-sidebar-menu">
+                <li class="sidebar-toggler hidden-phone"></li>
+                <li class="start"><a href="#"><i class="icon-th-large"></i><span class="title">aa</span><span class="arrow"></span></a></li>
+                <li class="start"><a href="#"><i class="icon-th-large"></i><span class="title">aaaa</span><span class="arrow"></span></a></li>
+                <li class="start"><a href="#"><i class="icon-th-large"></i><span class="title">bb</span><span class="arrow"></span></a></li>
+                <li class="start"><a href="#"><i class="icon-th-large"></i><span class="title">cccccc</span><span class="arrow"></span></a></li>
+            </ul>
+        </div>
+
+        <div class="page-content" style="min-height:745px !important">aaa</div>
+    </div>
+
+    <script src="/metronic_old/media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script src="/metronic_old/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    <script src="/metronic_old/media/js/bootstrap.min.js"></script>
+    <script src="/metronic_old/media/js/app.js" type="text/javascript"></script>
+    <script src="/metronic_old/media/js/index.js" type="text/javascript"></script>
+
+</body>
+</html>

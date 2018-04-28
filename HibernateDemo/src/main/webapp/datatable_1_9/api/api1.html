@@ -1,0 +1,70 @@
+<!doctype html>                 <!-- 获取api对象，用js操作表格。本例中让两个表格翻页 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/DataTables/datatables.css">
+
+    <script src="/jquery/jquery-3.3.1.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/DataTables/datatables.js"></script>
+
+
+    <script>
+        $(document).ready(() => {
+            $('#table_id1').dataTable({
+                sAjaxSource:'/datatable/getData3',
+                sAjaxDataProp:'',
+                aoColumns:[       // 返回是数据类型是数组时，columns设置可省略
+                    {mData:0},
+                    {mData:1},
+                ]
+            });
+            $('#table_id2').dataTable({
+                sAjaxSource:'/datatable/getData3',
+                sAjaxDataProp:'',
+                aoColumns:[       // 返回是数据类型是数组时，columns设置可省略
+                    {mData:0},
+                    {mData:1},
+                ]
+            });
+            $('#button1').click(() => {
+                var table1 = $('#table_id1').dataTable()
+                table1.fnPageChange( 'next' );
+                var table2 = $('#table_id2').dataTable()
+                table2.fnPageChange( 'next' );
+            });
+        });
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+<button id="button1">button</button>
+<table id="table_id1" class="table">
+    <thead>
+    <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<table id="table_id2" class="table">
+    <thead>
+    <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</body>
+</html>

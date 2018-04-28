@@ -1,0 +1,52 @@
+<!doctype html>         <!-- h5的data-*控制数据展示转换（正交） -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/DataTables/datatables.css">
+
+    <script src="/jquery/jquery-3.3.1.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/DataTables/datatables.js"></script>
+
+    <script>
+
+        $(document).ready(() => {
+            var callback;
+            var table = $('#table_id');
+            table.dataTable({});
+        });
+
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>未指定排序字段，默认按文字排序</th>
+            <th>指定排序字段</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-search="Tiger Nixon">T. Nixon</td>
+            <td>2nd April 2017</td>
+            <td data-order="1491062400">2nd April 2017</td>
+        </tr>
+        <tr>
+            <td data-search="Jim Green">J. Green</td>
+            <td>2nd March 2017</td>
+            <td data-order="1488384000">2nd March 2017</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

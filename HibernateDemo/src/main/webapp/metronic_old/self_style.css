@@ -1,0 +1,78 @@
+.page-header-fixed .page-container {
+    margin-top: 0;
+}
+
+.header .navbar-inner .container-fluid {
+    padding: 0 50px;
+    height: 100%;
+    line-height: 70px;
+}
+
+.header .navbar-inner .container-fluid > .top-menu > a {
+    display: inline-block;
+    color: white;
+    width: 110px;
+    height: 100%;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.header .navbar-inner .container-fluid > .top-menu > a:before {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    content: '';
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-image: url("/img/hd-1.png");
+}
+
+.header .navbar-inner .container-fluid > .top-menu > a.home:before {
+    background-image: url("/img/hd-1.png");
+}
+
+.top-menu {
+    height: 70px;
+}
+
+.header .navbar-inner {
+    background-color: #01aba0;
+    height: 70px;
+}
+
+.header .navbar-inner .container-fluid > .top-menu {
+    float: left;
+    margin-left: 40px;
+    height: 100%;
+    line-height: 1;
+}
+
+.header .navbar-inner .container-fluid {
+    padding: 0 50px;
+    height: 100%;
+    line-height: 70px;
+}
+.header .navbar-inner .container-fluid > .brand {
+    line-height: 70px;
+    height: 70px;
+    font-weight: normal;
+    font-size: 22px;
+}
+.page-header-fixed .page-container {
+    margin-top: 0;
+    flex-grow: 1;
+    display: flex;
+}
+.page-content {
+    background-color: white;
+    flex-grow: 1;
+    min-height: inherit !important;
+    overflow: auto;
+    /*min-height: inherit !important;
+    overflow: unset;*/
+}
+.page-sidebar {
+    background-color: #F5F5F5 !important;
+}

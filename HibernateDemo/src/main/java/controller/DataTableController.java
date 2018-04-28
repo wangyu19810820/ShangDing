@@ -3,6 +3,7 @@ package controller;
 import domain.datatable.*;
 
 import domain.datatable.param.DataTablesInput;
+import domain.datatable.param.OldDataTablesInput;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -102,6 +103,29 @@ public class DataTableController {
 
         DataTableReturnModel returnModel = new DataTableReturnModel();
         returnModel.setDraw(input.getDraw());
+        returnModel.setRecordsTotal(total);
+        returnModel.setRecordsFiltered(total);
+        returnModel.setData(list);
+        return returnModel;
+    }
+
+    @RequestMapping("/getData7")
+    @ResponseBody
+    public DataTableReturnModel getData7(OldDataTablesInput input, String selfParam) {
+        System.out.println(selfParam);
+        final int total = 45;
+
+        List<User> list = new ArrayList<>();
+        for (int i = 0; i < input.getIDisplayLength() && i + input.getIDisplayStart() < total; i++) {
+            int index = input.getIDisplayStart() + i;
+            User user1 = new User("user" + index,
+                    new Address("city" + index, "street" + index),
+                    new Article("name" + index, "2nd April 2017", "1491062400"));
+            list.add(user1);
+        }
+
+        DataTableReturnModel returnModel = new DataTableReturnModel();
+        returnModel.setSEcho(input.getSEcho());
         returnModel.setRecordsTotal(total);
         returnModel.setRecordsFiltered(total);
         returnModel.setData(list);

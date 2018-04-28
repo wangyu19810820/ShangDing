@@ -11,6 +11,7 @@ import java.util.List;
 @Data
 public class DataTableReturnModel {
 
+    private Integer sEcho;
     private Integer draw;
     private Integer recordsTotal;
     private Integer recordsFiltered;

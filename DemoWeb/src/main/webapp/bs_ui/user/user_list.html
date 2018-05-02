@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../DataTables/datatables.css">
+    <link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.css">
+    <style>
+
+    </style>
+</head>
+<body style="padding-top: 60px;">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">管理系统</div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="#">招标项目</a></li>
+            <li><a href="#">招标资讯</a></li>
+            <li><a href="#">资质管理</a></li>
+            <li class="active"><a href="#">用户权限</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<div class="contaner-fluid">
+    <div class="col-sm-3 hidden-xs">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#">用户管理</a></li>
+            <li><a href="#">角色管理</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-9">
+        <ol class="breadcrumb">
+            <li>用户权限</li>
+            <li>用户管理</li>
+            <li>用户列表</li>
+        </ol>
+        <div class="container-fluid" style="margin-bottom: 20px;">
+            <a href="user_add.html" class="btn btn-success">新增</a>
+            <button class="btn btn-danger">删除</button>
+        </div>
+        <table id="table_id" class="display">
+            <thead>
+            <tr>
+                <th>用户名</th>
+                <th>电话</th>
+                <th>电子邮件</th>
+                <th>QQ</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>张三</td>
+                <td>159232322</td>
+                <td>zhangsan@sina.com</td>
+                <td>34234242</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>1563232322</td>
+                <td>lisi@sina.com</td>
+                <td>2342342</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>1561111111</td>
+                <td>wangwu@163.com</td>
+                <td>1212323</td>
+            </tr>
+            <tr>
+                <td>赵六</td>
+                <td>159323423</td>
+                <td>zhaoliu@163.com</td>
+                <td>3234243</td>
+            </tr>
+            <tr>
+                <td>李刚</td>
+                <td>159232323</td>
+                <td>ligang@sina.com</td>
+                <td>213232</td>
+            </tr>
+            <tr>
+                <td>王志</td>
+                <td>15234323423</td>
+                <td>wangzhi@qq.com</td>
+                <td>32342342</td>
+            </tr>
+            <tr>
+                <td>吴起</td>
+                <td>1592332423</td>
+                <td>wuqi@sina.com</td>
+                <td>1212112</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer>
+    <div class="container-fluid">
+        <p class="text-center">All rights by @wangyu</p>
+    </div>
+</footer>
+
+<script src="../../jquery/jquery-3.3.1.js"></script>
+<script src="../../bootstrap/js/bootstrap.js"></script>
+<script src="../../DataTables/datatables.js"></script>
+<script src="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+<script src="user_list.js"></script>
+</body>
+</html>
